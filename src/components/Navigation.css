@@ -1,0 +1,110 @@
+.navbar {
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #162a2b; /* Adjust color as needed */
+    color: #d8ecec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it stays on top */
+  }
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+/* Styled Nav Links */
+.nav-links a {
+    color: #bec4c4;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Animated Bottom Border */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #445455     ; /* Neon cyan effect */
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+/* Active Link Styling */
+.nav-links a.active {
+    background-color: hsl(180, 34%, 89%, 80%);
+    padding: 10px;
+    border-radius: 5px;
+    color: #162a2b;
+    font-weight: bold;
+  }
+
+.nav-links a:hover {
+    color: #445455  ; /* Neon cyan */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expands to full width */
+}
+
+/* Add padding to the body to prevent content from hiding under the navbar */
+body {
+    padding-top: 60px; /* Adjust this value based on the navbar height */
+  }
+
+
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #d8ecec;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .mobile-menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #162a2b;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px 0;
+    }
+  
+    .nav-links.mobile-nav {
+      display: flex;
+    }
+  
+    .nav-links li {
+      padding: 10px 0;
+    }
+  }

@@ -1,0 +1,187 @@
+  
+  /* About Section Styling */
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #162a2b;
+    color: #d8ecec;
+    width: 100%;
+    margin-top: -5%;
+    min-height: 100vh; /* Set minimum height to 100% of the viewport */
+    padding: 0% 2%;  /* Padding for spacing */
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
+  }
+  
+  /* Left Content Section */
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: left;
+    background-color: #162a2b;
+    justify-content: center; /* Vertically center the content */
+    height: auto; /* Allow the content to grow with the content */
+  }
+ 
+  .intro {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d8ecec;
+  }
+  
+  .name {
+   
+    background: linear-gradient(to right, #d8ecec, #123f3d);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+    
+  }
+  
+  .role {
+    font-size: 2rem;
+    color: #d8ecec;
+    margin-bottom: 5%;
+    font-weight: 700;
+ 
+  }
+
+  /* Adding animation to role text */
+.role-text {
+  animation: changeRole 3s ease-in-out infinite;
+}
+
+/* Keyframes for changing role animation */
+@keyframes changeRole {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 5%;
+  }
+  
+  /* Social Media Icons */
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 5%;
+  }
+  
+  .socialmedia-icon {
+    font-size: 1.5rem;
+    color: #d8ecec;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+    background-color: #0e1c1d;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid hsl(180, 34%, 89%, 20%);
+  }
+  
+  .socialmedia-icon:hover {
+    transform: scale(1.2);
+    color: #bdc2c2;
+  }
+  
+  /* Download Button */
+  .download-btn {
+    background-color: #0e1c1d;
+    color: #d8ecec;
+    border: 1px solid hsl(180, 34%, 89%, 20%);
+    border-radius: 20px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 50%;
+  }
+  
+  .download-btn:hover {
+    background-color: #0e1c1d;
+    color: #bdc2c2;
+    transform: scale(1.01);
+  } 
+
+
+  
+  /* Right Section: Image */
+  .image-container {
+    margin-top: 5%;
+    width: 50%;
+    text-align: center;
+    height: auto; /* Set height to auto to make image responsive */
+    background-color: #162a2b;
+  }
+  
+  .image-container img {
+    width: 100%; /* Make image responsive */
+    max-width: 400px; /* Adjust size as needed */
+    height: auto;
+    border: 1px solid hsl(180, 34%, 89%, 20%);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    animation: pulse 5s ease-in-out infinite;
+  }
+
+
+  
+  /* Hover Effect */
+  .image-container img:hover {
+    transform: scale(1.01);
+  }
+  
+  /* Pulse Animation */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05); /* Slight zoom-in effect */
+    }
+  }
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stack sections in mobile view */
+    align-items: center;
+    text-align: center;
+    min-height: auto; /* Remove min-height for mobile */
+    margin-top: 0%;
+  }
+
+  .about-content {
+    width: 100%; /* Make content full-width on mobile */
+    padding: 20px;
+    height: auto; /* Allow content to grow with mobile screen */
+  }
+
+  .image-container {
+    width: 100%;
+    padding: 20px;
+    height: auto; /* Ensure the image height adjusts for mobile */
+  }
+}
+ 
